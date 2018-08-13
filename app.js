@@ -9,7 +9,6 @@ const cors          = require('cors')
 
 // route
 const indexRouter   = require('./routes/index');
-const connectRouter = require('./routes/connect');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,7 +25,6 @@ app.use(express.static(__dirname + 'https://davidjoshua.id/'));
 
 // route use app
 app.use('/', indexRouter);
-app.use('/connect', connectRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
