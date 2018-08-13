@@ -1,0 +1,9 @@
+config.js
+
+public_html
+
+node_modules
+
+.env
+
+.DS_Store
