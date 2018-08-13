@@ -1,7 +1,5 @@
 node_modules
 
-public_html
-
 .env
 
 .DS_Store
