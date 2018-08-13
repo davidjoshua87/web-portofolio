@@ -17,7 +17,7 @@ const smtpTransport = nodemailer.createTransport("SMTP", {
 
 router
   .get('/', function (req, res) {
-    res.sendfile('http://www.davidjoshua.id/about.html');
+    res.sendfile('https://davidjoshua.id/about.html');
   })
   .get('/send', function (req, res) {
     var mailOptions = {

@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // set dirname static 
-app.use(express.static(__dirname + 'http://www.davidjoshua.id/'));
+app.use(express.static(__dirname + 'https://davidjoshua.id/'));
 
 // route use app
 app.use('/', indexRouter);
