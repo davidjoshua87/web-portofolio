@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 const router = express.Router();
 
 // setup nodemailer
-const smtpTransport = nodemailer.createTransport("SMTP", {
+const smtpTransport = nodemailer.createTransport({
   service: 'gmail',
   host: "smtp.gmail.com",
   auth: {
@@ -25,9 +25,9 @@ router
       from: `Contact Form Request: < ${req.query.user} >`,
       subject: `Contact Form Message From: < ${req.query.name} >`,
       html: `<b>Name:</b> ${req.query.name} <br>
-             <b>Email:</b> ${req.query.user} <br>
-             <b>Message:</b> ${req.query.text}`
-    }
+            <b>Email:</b> ${req.query.user} <br>
+            <b>Message:</b> ${req.query.text}`
+  }
     console.log(mailOptions);
     smtpTransport.sendMail(mailOptions, function (err, response) {
       if (err) {
